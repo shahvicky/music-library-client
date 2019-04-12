@@ -68,8 +68,5 @@
     "Page",
     "Application"
   ],
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "license": "MIT"
 }

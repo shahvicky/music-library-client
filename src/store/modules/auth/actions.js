@@ -16,46 +16,26 @@ export const check = ({ commit }) => {
   commit(types.CHECK);
 };
 
-export const register = ({ commit }) => {
-  /*
-   * Normally you would use a proxy to register the user:
-   *
-   * new Proxy()
-   *  .register(payload)
-   *  .then((response) => {
-   *    commit(types.REGISTER, response);
-   *  })
-   *  .catch(() => {
-   *    console.log('Request failed...');
-   *  });
-   */
+export const register = async ({ commit }, payload) => {
+  
+  let err, response;
+  [err, response] = await to(new AuthProxy().register(payload));
+  if(err) {
+    console.log(err);
+    console.log('Registration failed!!!');
+  } else if(!response.success) {
+    console('Could not register');
+  } else {
+    commit(types.REGISTER, response);
+    Vue.router.push({
+      name: 'login.index',
+    });
+  }
 
-
-  commit(types.LOGIN, 'RandomGeneratedToken');
-  Vue.router.push({
-    name: 'home.index',
-  });
 };
 
 export const login = async (context, payload) => {
-  /*
-   * Normally you would use a proxy to log the user in:
-   *
-   * new Proxy()
-   *  .login(payload)
-   *  .then((response) => {
-   *    commit(types.LOGIN, response);
-   *    store.dispatch('account/find');
-   *    Vue.router.push({
-   *      name: 'home.index',
-   *    });
-   *  })
-   *  .catch(() => {
-   *    console.log('Request failed...');
-   *  });
-   */
-  let err,
-    user;
+  let err, user;
   [err, user] = await to(new AuthProxy().login(payload));
   if (err) {
     console.log(err);
@@ -68,12 +48,6 @@ export const login = async (context, payload) => {
       name: 'home.index',
     });
   }
-
-  // commit(types.LOGIN, 'RandomGeneratedToken');
-  // store.dispatch('account/find');
-  // Vue.router.push({
-  //   name: 'home.index',
-  // });
 };
 
 export const logout = ({ commit }) => {

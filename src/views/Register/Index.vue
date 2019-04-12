@@ -14,7 +14,7 @@
                 </span>
               </div>
               <input
-                v-model="user.firstName"
+                v-model="user.fname"
                 type="text"
                 placeholder="First name"
                 class="form-control"
@@ -29,7 +29,7 @@
                 </span>
               </div>
               <input
-                v-model="user.lastName"
+                v-model="user.lname"
                 type="text"
                 placeholder="Last name"
                 class="form-control"
@@ -129,8 +129,8 @@ export default {
   data() {
     return {
       user: {
-        firstName: null,
-        lastName: null,
+        fname: null,
+        lname: null,
         email: null,
         passwordConfirm: null,
         password: null,

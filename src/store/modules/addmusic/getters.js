@@ -1,9 +1,9 @@
 /* ============
- * Getters for the account module
+ * Getters for the add music module
  * ============
  *
  * The getters that are available on the
- * account module.
+ * add music module.
  */
 
 export default {};

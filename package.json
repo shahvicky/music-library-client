@@ -41,16 +41,7 @@
   ],
   "author": "Vivek Shah <shahvicky1992@gmail.com>",
   "description": "A music library application to manage your music",
-  "lint-staged": {
-    "*.js": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shahvicky/music-library-client.git"

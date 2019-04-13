@@ -20,9 +20,9 @@ export default [
 
   // Account
   {
-    path: '/account',
-    name: 'account.index',
-    component: () => import('@/views/Account/Index.vue'),
+    path: '/addmusic',
+    name: 'addmusic.index',
+    component: () => import('@/views/AddMusic/Index.vue'),
 
     // If the user needs to be authenticated to view this page.
     meta: {

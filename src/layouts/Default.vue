@@ -32,13 +32,13 @@
             </a>
           </router-link>
           <router-link
-            :to="{ name: 'account.index' }"
+            :to="{ name: 'addmusic.index' }"
             active-class="active"
             class="nav-item"
             tag="li"
           >
             <a class="nav-link">
-              Account
+              Add Music
             </a>
           </router-link>
         </ul>

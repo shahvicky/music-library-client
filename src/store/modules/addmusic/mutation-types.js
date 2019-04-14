@@ -7,7 +7,9 @@
  */
 
 export const SEARCH = 'SEARCH';
+export const TRACK = 'TRACK';
 
 export default {
-  SEARCH
+  SEARCH,
+  TRACK
 };

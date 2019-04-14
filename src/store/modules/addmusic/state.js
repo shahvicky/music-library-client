@@ -6,5 +6,6 @@
  */
 
 export default {
-  searchTrackResults: []
+  searchTrackResults: [],
+  trackInfo: ''
 };

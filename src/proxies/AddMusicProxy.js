@@ -14,11 +14,17 @@ class AddMusicProxy extends Proxy {
   /**
    * Search music from the last.fm 
    */
+  //TODO change this calls to backend
   searchTracks(searchKey) {
-    let baseURL = process.env.VUE_APP_LAST_FM_URL_ROOT
-    let apiKey = process.env.VUE_APP_LAST_FM_API_KEY;
-    let uri = `${baseURL}/2.0/?method=track.search&track=${searchKey}&api_key=${apiKey}&format=json`
-    return this.submit('get', uri);
+    return this.submit('get', `${this.endpoint}/addmusic/search/${searchKey}`);
+  }
+
+  /**
+   * Get track info
+   */
+  //TODO change this call to backend
+  addTrack(trackId) {
+    return this.submit('get', `${this.endpoint}/addmusic/addToLib/${trackId}`);
   }
 }
 

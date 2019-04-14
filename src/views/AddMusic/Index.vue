@@ -45,7 +45,7 @@ export default {
   methods: {
     searchMusic: function() {
       if(this.searchKey.length > 0) {
-        this.$store.dispatch('addmusic/searchMusic', this.searchKey);
+        this.$store.dispatch('addmusic/searchMusic', {searchKey: this.searchKey});
       }
     }
   },

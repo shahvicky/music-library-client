@@ -13,7 +13,7 @@ import createLogger from 'vuex/dist/logger';
 // Modules
 import addmusic from './modules/addmusic';
 import auth from './modules/auth';
-
+import dashboard from './modules/dashboard';
 
 const debug = process.env.NODE_ENV !== 'production';
 
@@ -24,6 +24,7 @@ export default new Vuex.Store({
   modules: {
     addmusic,
     auth,
+    dashboard
   },
 
   /**

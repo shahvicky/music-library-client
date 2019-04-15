@@ -37,6 +37,8 @@ The flow of the application is as follows:
 
 #### Login/Register
 App starts with a Login form. If you are already a user, just login or else you can register a new user from the Register link.
+##### Password must have: upper case, lower case, numeric, minimum length 6. 
+If the password requirement is not met, the registration will not happen (without any error message, its a TODO item). Similarly in the Login screen if a wrong password is entered, you will not see any error message. 
 
 #### Home
 After login, you land on the dashboard, which is the Home tab on the navigation bar. 
@@ -48,3 +50,6 @@ You can also use the top heading like Album, Name, and Artist to sort in ascendi
 #### Add Music
 If you want to add music to your library (dashboard), you can type in the search keyword (it can be track, artist, album, etc). and it show the results from the last.fm music library. When you click on the Add to Library, it will be added to your home screen. (Currently, you won't notice any changes when you click the Add to Library, it;s still in development, but the track will be added to your home screen). You can go back to Home to see your added tracks. 
 
+#### TODO
+1. Validations on the Login and Registration screens
+2. Confirmations on success or failures of any event
